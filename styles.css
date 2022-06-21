@@ -2,6 +2,7 @@
 
 * {
   box-sizing: border-box;
+  user-select: none;
 }
 
 body {
@@ -9,9 +10,12 @@ body {
   background-color: #616161;
   display: flex;
   padding-top: 5rem;
-  justify-content: center;
-  overflow: hidden;
   margin: 0;
+}
+.wrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 .row {
@@ -32,16 +36,41 @@ body {
 
 .item {
   width: 150px;
-  height: 66px;
+  height: 80px;
   border: 1px solid rgba(58, 58, 58, 0.61);
   box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
   border-radius: 20px;
   background: #222222;
-  padding: 0.8rem 1rem;
+  padding: 1em;
   color: #f7f6f7;
   text-align: center;
   cursor: grab;
+  margin-bottom: 10px;
 }
+
+.add {
+  width: 150px;
+  height: 100px;
+  border: 1px solid rgba(58, 58, 58, 0.61);
+  box-shadow: 4px 4px 20px 4px rgb(51, 51, 51);
+  border-radius: 20px;
+  background: #bebebe;
+  padding: 1em;
+  color: #f7f6f7;
+  text-align: center;
+  margin-right: 50px;
+}
+/* .add p {
+  position: absolute;
+  left: 240px;
+  top: 155px;
+  width: 35px;
+  height: 35px;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 0px 0px 2px 7px #4b4b4b;
+  background: #4b4b4b;
+  
+} */
 
 .item:active {
   cursor: grabbing;
@@ -53,15 +82,15 @@ body {
 }
 
 .start {
-  background: linear-gradient(90deg, #ff85e4 0%, #229efd 179.25%);
+  background: linear-gradient(150deg, #ff85e4 0%, #229efd 179.25%);
 }
 
 .progress {
-  background: linear-gradient(90deg, #209cff 0%, #68e0cf 100%);
+  background: linear-gradient(150deg, #209cff 0%, #68e0cf 100%);
 }
 
 .done {
-  background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%);
+  background: linear-gradient(150deg, #84fab0 0%, #8fd3f4 100%);
 }
 
 .holding {
